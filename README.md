@@ -1,2 +1,2 @@
-# OwnInitialzr
+# OwnInitializr
 My Own Spring Initializr
