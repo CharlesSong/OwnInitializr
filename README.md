@@ -10,6 +10,7 @@
         <dependency>
 			<groupId>io.spring.initializr</groupId>
 			<artifactId>initializr-web</artifactId>
+			<version>0.4.0.BUILD-SNAPSHOT</version>
 		</dependency>
 ```
 ## 3. 启动运行
