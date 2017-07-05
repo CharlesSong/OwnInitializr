@@ -7,14 +7,14 @@
 ![image](https://github.com/CharlesSong/OwnInitializr/blob/master/screenshots/8cb0c021-2eec-4f17-9fa5-96fd8b8a5801.png)
 ## 2. 添加依赖
 ```
-                <dependency>
+        <dependency>
 			<groupId>io.spring.initializr</groupId>
 			<artifactId>initializr-web</artifactId>
 		</dependency>
 ```
 ## 3. 启动运行
 运行报错，无法引入依赖。仔细查找文档，https://github.com/spring-io/initializr README中有说明：
-
+![image](https://github.com/CharlesSong/OwnInitializr/blob/master/screenshots/8eed3bc3-8c3c-4764-a871-01db1ca4ed86.png)
  >简单翻译下：Spring Initializr没有在Maven仓库中提供，你需要自己从源码构建。
 
 ## 4. Clone源码，按照源码提示进行编译
@@ -25,7 +25,7 @@
 //备注：mvnw执行的是包装maven，未使用本地的maven，安装到maven默认仓库位置。如果本地maven仓库的位置不是默认的，在本地仓库下还是找不到依赖jar，可以在默认位置复制到本地即可。
 ```
 执行成功结果
-
+![image](https://github.com/CharlesSong/OwnInitializr/blob/master/screenshots/2084eab3-2936-42c6-8e9b-b848045b35be.png)
 ## 5.再次启动运行，异常
 ```
 2017-07-05 10:33:51.265 ERROR 134836 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Destroy method on bean with name 'org.springframework.boot.autoconfigure.internalCachingMetadataReaderFactory' threw an exception
@@ -81,18 +81,26 @@ Caused by: java.lang.ClassCastException: java.lang.ClassNotFoundException cannot
 ```
 异常没有找到解决方案。补充：后来发现是编译缓存的问题。清楚缓存或者重建项目后，恢复正常。
 
+![image](https://github.com/CharlesSong/OwnInitializr/blob/master/screenshots/67761668-f3eb-44d8-92ff-8dcaec6e5a03.png)
 
  通过截图可以看出依赖等配置都是空的。
 
 ## 6.自定义配置
-编辑application.yml配置文件。详见配置文件
+编辑application.yml配置文件。详见配置文件以及[官方文档](http://docs.spring.io/initializr/docs/current-SNAPSHOT/reference/htmlsingle/)
 
 #  Ⅲ.项目源码
+
+https://github.com/CharlesSong/OwnInitializr
 
 #  Ⅳ.待解决问题
 ## 1.默认生成application.yml配置文件
 在Issue中看到，现在并不支持默认生成application.yml。原因是IDE对yml支持不友好。
-## 2.如何添加一些额外的信息到生成的项目中？比如：服务中心、配置中心的配置、通用jar包、数据库配置等
+
+## 2.如何添加一些额外的信息到生成的项目中？
+比如：服务中心、配置中心的配置、通用jar包、数据库配置等
+
+## 3.其他
+其实，如果编译源码构建之后，就没必要自己搭建了。直接把源码打包部署到服务器即可，还继承了应用监控。
 
 
 
