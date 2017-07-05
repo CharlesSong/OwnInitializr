@@ -4,7 +4,7 @@
 # Ⅱ.开始搭建
 
 ## 1. 通过 https://start.spring.io/ 创建一个Maven  web项目
-![image](https://github.com/CharlesSong/OwnInitializr/screenshots/8cb0c021-2eec-4f17-9fa5-96fd8b8a5801.png)
+![image](https://github.com/CharlesSong/OwnInitializr/blob/master/screenshots/8cb0c021-2eec-4f17-9fa5-96fd8b8a5801.png)
 ## 2. 添加依赖
 ```
                 <dependency>
